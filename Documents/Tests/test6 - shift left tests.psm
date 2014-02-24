@@ -1,0 +1,41 @@
+
+                   LOAD s1, AA
+                   SLA s1     
+                   SLA s1     
+                   SLA s1     
+                   SLA s1     
+                   SLA s1     
+                   SLA s1     
+                   SLA s1     
+                   SLA s1     
+                   SLA s1     ; s1 = AA
+
+                   LOAD s1, AA
+                   SLX s1     
+                   SLX s1     
+                   SLX s1     
+                   SLX s1     
+                   SLX s1     
+                   SLX s1     
+                   SLX s1     
+                   SLX s1     ; s1 = 00
+ 
+                   LOAD s1, FF
+                   SL0 s1     
+                   SL0 s1     
+                   SL0 s1     
+                   SL0 s1     
+                   SL0 s1     
+                   SL0 s1     
+                   SL0 s1     
+                   SL0 s1     ; s1 = 00
+
+                   LOAD s1, 00
+                   SL1 s1     
+                   SL1 s1     
+                   SL1 s1     
+                   SL1 s1     
+                   SL1 s1     
+                   SL1 s1     
+                   SL1 s1     
+                   SL1 s1     ; s1 = FF

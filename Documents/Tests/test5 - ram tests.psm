@@ -1,0 +1,11 @@
+start:                        
+                   LOAD s0, 12
+                   STORE s0, 03
+                   XOR s0, s0 
+                   FETCH s0, 03
+                   COMPARE s0, 12
+                   JUMP NZ, bad
+                   JUMP start 
+
+bad:                          
+                              ; развалена инструкция

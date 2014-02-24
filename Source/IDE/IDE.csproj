@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{214F141F-B8DA-4E9E-8CA4-39AE11C7EDB7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IDE</RootNamespace>
+    <AssemblyName>IDE</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Release</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CodeEditorControl.Designer.cs">
+      <DependentUpon>CodeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPU\CommandManager.cs" />
+    <Compile Include="CPU\Commands\cmdAND.cs" />
+    <Compile Include="CPU\Commands\cmdCALL.cs" />
+    <Compile Include="CPU\Commands\dirCONSTANT.cs" />
+    <Compile Include="CPU\Commands\cmdDISABLEINTERRUPT.cs" />
+    <Compile Include="CPU\Commands\CommandAttribute.cs" />
+    <Compile Include="CPU\Commands\cmdADD.cs" />
+    <Compile Include="CPU\Commands\CommandBase.cs" />
+    <Compile Include="CPU\Commands\cmdADDCY.cs" />
+    <Compile Include="CPU\Commands\CommandBaseDoubleOperand.cs" />
+    <Compile Include="CPU\Commands\cmdCOMPARE.cs" />
+    <Compile Include="CPU\Commands\cmdFETCH.cs" />
+    <Compile Include="CPU\Commands\CommandBaseDoubleOperandAddress.cs" />
+    <Compile Include="CPU\Commands\cmdLOAD.cs" />
+    <Compile Include="CPU\Commands\cmdOR.cs" />
+    <Compile Include="CPU\Commands\CommandBaseSingleOperand.cs" />
+    <Compile Include="CPU\Commands\cmdRL.cs" />
+    <Compile Include="CPU\Commands\cmdRR.cs" />
+    <Compile Include="CPU\Commands\cmdSL.cs" />
+    <Compile Include="CPU\Commands\cmdSL0.cs" />
+    <Compile Include="CPU\Commands\cmdSLX.cs" />
+    <Compile Include="CPU\Commands\cmdSL1.cs" />
+    <Compile Include="CPU\Commands\cmdSLA.cs" />
+    <Compile Include="CPU\Commands\cmdSR.cs" />
+    <Compile Include="CPU\Commands\cmdSR0.cs" />
+    <Compile Include="CPU\Commands\cmdSR1.cs" />
+    <Compile Include="CPU\Commands\cmdSRA.cs" />
+    <Compile Include="CPU\Commands\cmdSRX.cs" />
+    <Compile Include="CPU\Commands\cmdSTORE.cs" />
+    <Compile Include="CPU\Commands\cmdSUB.cs" />
+    <Compile Include="CPU\Commands\cmdSUBCY.cs" />
+    <Compile Include="CPU\Commands\cmdTEST.cs" />
+    <Compile Include="CPU\Commands\cmdXOR.cs" />
+    <Compile Include="CPU\Commands\cmdJUMP.cs" />
+    <Compile Include="CPU\Commands\cmdENABLEINTERRUPT.cs" />
+    <Compile Include="CPU\Commands\CommandBaseConditionSingleAddress.cs" />
+    <Compile Include="CPU\Commands\CommandBaseCondition.cs" />
+    <Compile Include="CPU\Commands\cmdRETURN.cs" />
+    <Compile Include="CPU\Commands\CommandBaseEmpty.cs" />
+    <Compile Include="CPU\Commands\cmdRETURNIDISABLE.cs" />
+    <Compile Include="CPU\Commands\cmdRETURNIENABLE.cs" />
+    <Compile Include="CPU\Commands\cmdINPUT.cs" />
+    <Compile Include="CPU\Commands\cmdOUTPUT.cs" />
+    <Compile Include="CPU\Commands\dirNAMEREG.cs" />
+    <Compile Include="CPU\Commands\dirADDRESS.cs" />
+    <Compile Include="CPU\Commands\EmptyLine.cs" />
+    <Compile Include="CPU\TheAssembler.cs" />
+    <Compile Include="ErrorsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ErrorsControl.Designer.cs">
+      <DependentUpon>ErrorsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extenders.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CodeEditorControl.resx">
+      <DependentUpon>CodeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorsControl.resx">
+      <DependentUpon>ErrorsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistersTool.resx">
+      <DependentUpon>RegistersTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScratchpadTool.resx">
+      <DependentUpon>ScratchpadTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StackTool.resx">
+      <DependentUpon>StackTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Diagrams\BaseCommands.cd" />
+    <None Include="Diagrams\TheCpu.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RegistersTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegistersTool.Designer.cs">
+      <DependentUpon>RegistersTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPU\TheCpu.cs" />
+    <Compile Include="ScratchpadTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScratchpadTool.Designer.cs">
+      <DependentUpon>ScratchpadTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StackTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StackTool.Designer.cs">
+      <DependentUpon>StackTool.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Contrib\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.csproj">
+      <Project>{26c5f25f-b450-4caf-ad8b-b8d11ae73457}</Project>
+      <Name>Be.Windows.Forms.HexBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

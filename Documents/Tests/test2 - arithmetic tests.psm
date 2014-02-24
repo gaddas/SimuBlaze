@@ -1,0 +1,13 @@
+start:                        
+                   LOAD s2, 00
+                   LOAD s3, 00
+                   ADD s3, 01 
+                   SUB s3, 01 
+                   COMPARE s2, s3
+                   JUMP NZ, badresult
+                   ADD s3, 01
+                   COMPARE s2, s3
+                   JUMP Z, badresult
+                   JUMP start 
+badresult:                    
+                              ; имаме грешна инструкция

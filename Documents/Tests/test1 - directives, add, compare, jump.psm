@@ -1,0 +1,15 @@
+
+                                        ; дефинираме константи
+              CONSTANT nula, F0         
+              CONSTANT edno, 01         
+              NAMEREG s0, reg1          
+                                        ; инициализираме
+              LOAD reg1, nula           
+start:                                  
+              ADD reg1, edno            
+          
+loop:                                   ; цикъл
+              ADD reg1, edno            
+              COMPARE reg1, 00          
+              JUMP NZ, loop             
+              JUMP START                

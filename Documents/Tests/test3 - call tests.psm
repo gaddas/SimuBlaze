@@ -1,0 +1,8 @@
+start:                        
+                   CALL MyFunction
+                   JUMP start ;
+                   LOAD s0, 2 
+MyFunction:                   
+                   LOAD s0, 1 
+                   RETURN     
+		
